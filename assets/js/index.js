@@ -177,6 +177,11 @@ $("#body").on("click", ".like-review", async function (event) {
 
       await contractCall('likeLifeHack', [dataIndex], 0)
       location.reload(true)
+      
+      var regbtn = document.getElementById("likeButton")
+      regbtn.innerHTML = '<i class="fa fa-heart" aria-hidden="true"></i> You liked this'
+
+
       $(this).html('<i class="fa fa-heart" aria-hidden="true"></i> You liked this');
       $(this).children('.fa-heart').addClass('animate-like');
     
